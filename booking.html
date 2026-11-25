@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Car - DriveEasy</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="nav">
+
+        <a href="index.html"
+           class="logo">
+            Drive<span>Easy</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cars.html">
+                Cars
+            </a>
+
+            <a class="active"
+               href="booking.html">
+                My Booking
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-head">
+
+    <p class="tag">
+        RESERVATION
+    </p>
+
+    <h1>
+        Book Your Car
+    </h1>
+
+    <p>
+        Enter your details and confirm
+        your reservation.
+    </p>
+
+</section>
+
+
+<main class="booking-layout">
+
+
+    <form
+        class="form-card"
+        onsubmit="confirmBooking(event)"
+    >
+
+        <h2>
+            Customer Details
+        </h2>
+
+
+        <div class="form-grid">
+
+
+            <div>
+
+                <label>
+                    Full Name *
+                </label>
+
+                <input
+                    id="customerName"
+                    required
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Phone *
+                </label>
+
+                <input
+                    id="customerPhone"
+                    required
+                    pattern="[0-9]{10}"
+                    placeholder="10 digit number"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Email *
+                </label>
+
+                <input
+                    id="customerEmail"
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Pickup Location *
+                </label>
+
+                <input
+                    id="pickupLocation"
+                    required
+                    placeholder="City / location"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Pickup Date *
+                </label>
+
+                <input
+                    id="pickupDate"
+                    type="date"
+                    required
+                    onchange="updateTotal()"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Return Date *
+                </label>
+
+                <input
+                    id="returnDate"
+                    type="date"
+                    required
+                    onchange="updateTotal()"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Payment Method
+                </label>
+
+                <select id="paymentMethod">
+
+                    <option>
+                        UPI
+                    </option>
+
+                    <option>
+                        Credit / Debit Card
+                    </option>
+
+                    <option>
+                        Cash on Pickup
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="btn full"
+            type="submit"
+        >
+            Confirm Booking
+        </button>
+
+
+        <p class="small-note">
+            Demo payment: no real money will be charged.
+        </p>
+
+    </form>
+
+
+
+    <aside class="summary-card">
+
+        <h2>
+            Booking Summary
+        </h2>
+
+        <div id="bookingCar"></div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Price / day
+            </span>
+
+            <strong id="summaryPrice">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Rental days
+            </span>
+
+            <strong id="summaryDays">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-line total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="summaryTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+    </aside>
+
+
+</main>
+
+
+<footer>
+
+    <p class="copyright">
+        © 2026 DriveEasy Car Rental System |
+        College Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+<script>
+    loadBookingCar();
+    setMinDates();
+</script>
+
+</body>
+</html>
+

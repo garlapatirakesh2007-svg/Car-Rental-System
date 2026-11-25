@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cars - DriveEasy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+console.log.poutput /in
+<body>
+
+<header>
+
+    <div class="nav">
+
+        <a href="index.html" class="logo">
+            Drive<span>Easy</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a class="active" href="cars.html">
+                Cars
+            </a>
+
+            <a href="booking.html">
+                My Booking
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-head">
+
+    <p class="tag">OUR FLEET</p>
+
+    <h1>Choose Your Car</h1>
+
+    <p>
+        Compare cars, prices and features
+        before booking.
+    </p>
+
+</section>
+
+
+<section class="filter-area">
+
+    <input
+        id="carSearch"
+        type="text"
+        placeholder="Search by car name..."
+        oninput="filterCars()"
+    >
+
+    <select id="carType"
+            onchange="filterCars()">
+
+        <option value="all">
+            All Types
+        </option>
+
+        <option value="SUV">
+            SUV
+        </option>
+
+        <option value="Sedan">
+            Sedan
+        </option>
+
+        <option value="Hatchback">
+            Hatchback
+        </option>
+
+        <option value="Luxury">
+            Luxury
+        </option>
+
+    </select>
+
+
+    <select id="sortCars"
+            onchange="filterCars()">
+
+        <option value="default">
+            Sort by
+        </option>
+
+        <option value="low">
+            Price: Low to High
+        </option>
+
+        <option value="high">
+            Price: High to Low
+        </option>
+
+    </select>
+
+</section>
+
+
+<section class="section cars-section">
+
+    <div class="results">
+
+        <span id="resultCount">0</span>
+        cars available
+
+    </div>
+
+    <div
+        class="car-grid"
+        id="allCars">
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p class="copyright">
+        © 2026 DriveEasy Car Rental System |
+        College Project
+    </p>
+
+</footer>
+
+
+<script>
+    filterCars();
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

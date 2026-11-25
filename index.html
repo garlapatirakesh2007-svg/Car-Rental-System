@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveEasy - Car Rental</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <a href="index.html" class="logo">
+            Drive<span>Easy</span>
+        </a>
+
+        <nav>
+            <a class="active" href="index.html">Home</a>
+            <a href="cars.html">Cars</a>
+            <a href="booking.html">My Booking</a>
+            <a href="login.html">Login</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="tag">YOUR JOURNEY, YOUR CAR</p>
+
+        <h1>
+            Rent a car.<br>
+            <span>Drive your way.</span>
+        </h1>
+
+        <p>
+            Choose from our wide range of clean, reliable
+            and affordable cars for your next trip.
+        </p>
+
+        <a href="cars.html" class="btn">Explore Cars</a>
+
+    </div>
+
+</section>
+
+
+<section class="search-box">
+
+    <h2>Find your perfect car</h2>
+
+    <div class="search-grid">
+
+        <div>
+            <label>Pickup Location</label>
+            <input id="homeLocation"
+                   type="text"
+                   placeholder="e.g. Visakhapatnam">
+        </div>
+
+        <div>
+            <label>Pickup Date</label>
+            <input id="homePickup" type="date">
+        </div>
+
+        <div>
+            <label>Return Date</label>
+            <input id="homeReturn" type="date">
+        </div>
+
+        <button class="btn" onclick="homeSearch()">
+            Search Cars
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <div>
+            <p class="tag">POPULAR CHOICES</p>
+            <h2>Our Featured Cars</h2>
+        </div>
+
+        <a href="cars.html" class="text-link">
+            View all cars →
+        </a>
+
+    </div>
+
+    <div class="car-grid" id="featuredCars"></div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="feature">
+        <div class="icon">🚗</div>
+        <h3>Wide Selection</h3>
+        <p>
+            Economy, SUV, sedan and luxury cars
+            for every journey.
+        </p>
+    </div>
+
+    <div class="feature">
+        <div class="icon">💳</div>
+        <h3>Easy Booking</h3>
+        <p>
+            Book your vehicle in a few simple steps.
+        </p>
+    </div>
+
+    <div class="feature">
+        <div class="icon">🛡️</div>
+        <h3>Safe & Reliable</h3>
+        <p>
+            Well-maintained vehicles and
+            transparent pricing.
+        </p>
+    </div>
+
+    <div class="feature">
+        <div class="icon">📞</div>
+        <h3>24/7 Support</h3>
+        <p>
+            We're here to help whenever you need us.
+        </p>
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+            <a href="index.html" class="logo">
+                Drive<span>Easy</span>
+            </a>
+
+            <p>Simple. Reliable. Ready to drive.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="cars.html">Cars</a>
+            <a href="booking.html">Bookings</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>support@driveeasy.com</p>
+            <p>+91 98765 43210</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 DriveEasy Car Rental System |
+        College Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+<script>
+    renderCars("featuredCars", cars.slice(0, 3));
+</script>
+
+</body>
+</html>
+

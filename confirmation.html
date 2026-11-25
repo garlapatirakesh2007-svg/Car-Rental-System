@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmed - DriveEasy</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="nav">
+
+        <a href="index.html"
+           class="logo">
+            Drive<span>Easy</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="cars.html">Cars</a>
+
+            <a href="booking.html">
+                My Booking
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="confirmation">
+
+    <div class="check">
+        ✓
+    </div>
+
+    <p class="tag">
+        RESERVATION SUCCESSFUL
+    </p>
+
+    <h1>
+        Booking Confirmed!
+    </h1>
+
+    <p>
+        Your car has been reserved successfully.
+    </p>
+
+
+    <div class="receipt"
+         id="receipt">
+    </div>
+
+
+    <div class="button-row">
+
+        <a href="index.html"
+           class="btn">
+            Back to Home
+        </a>
+
+        <button
+            class="btn secondary"
+            onclick="window.print()">
+            Print Receipt
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p class="copyright">
+        © 2026 DriveEasy Car Rental System |
+        College Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+<script>
+    showConfirmation();
+</script>
+
+</body>
+</html>
+

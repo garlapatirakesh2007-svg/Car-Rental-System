@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account - DriveEasy</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body class="auth-page">
+
+
+<div class="auth-box">
+
+    <a href="index.html"
+       class="logo">
+        Drive<span>Easy</span>
+    </a>
+
+
+    <h1>
+        Create Account
+    </h1>
+
+    <p>
+        Register to make and manage bookings.
+    </p>
+
+
+    <form onsubmit="registerUser(event)">
+
+        <label>
+            Full Name
+        </label>
+
+        <input
+            id="regName"
+            required
+            placeholder="Your name"
+        >
+
+
+        <label>
+            Email
+        </label>
+
+        <input
+            id="regEmail"
+            type="email"
+            required
+            placeholder="you@example.com"
+        >
+
+
+        <label>
+            Password
+        </label>
+
+        <input
+            id="regPassword"
+            type="password"
+            minlength="6"
+            required
+            placeholder="Minimum 6 characters"
+        >
+
+
+        <button
+            class="btn full"
+            type="submit">
+            Create Account
+        </button>
+
+    </form>
+
+
+    <p
+        class="auth-message"
+        id="registerMessage">
+    </p>
+
+
+    <p>
+        Already registered?
+
+        <a href="login.html">
+            Login
+        </a>
+    </p>
+
+
+    <a href="index.html"
+       class="back-link">
+        ← Back to website
+    </a>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
